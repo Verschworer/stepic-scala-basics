@@ -81,37 +81,73 @@ object ScalaPlayground extends App {
 //  val student = new Student("Sam")
 
 
-  class Instructor (val id: Int, val name: String, val surname: String){
-    def fullName() : String = s"${name.charAt(0).toUpper + name.substring(1).toLowerCase} " +
-      s"${surname.charAt(0).toUpper + surname.substring(1).toLowerCase}"
+//  class Instructor (val id: Int, val name: String, val surname: String){
+//    def fullName() : String = s"${name.charAt(0).toUpper + name.substring(1).toLowerCase} " +
+//      s"${surname.charAt(0).toUpper + surname.substring(1).toLowerCase}"
+//  }
+//
+//  class Course(val courseID: Int, val title: String, val releaseYear: String, val instructor: Instructor){
+//    def getID() : String = s"$courseID${instructor.id}"
+//
+//    def isTaughtBy(instructor: Instructor): Boolean = {
+//      if (instructor == this.instructor) true
+//      else false
+//    }
+//
+//    def copyCourse(newReleaseYear: String) = new Course(
+//      courseID = this.courseID,
+//      title = this.title,
+//      releaseYear = newReleaseYear,
+//      instructor = this.instructor)
+//
+//  }
+//
+//
+//
+//  val krip = new Instructor(id = 1, name = "sergEy", surname = "kREpKOV")
+//  val kc = new Course(courseID = 9, title = "knifecombat", releaseYear = "2021", instructor = krip)
+//
+//
+//  println(krip.fullName())
+//  println(kc.getID())
+//  println(kc.isTaughtBy(krip))
+//  val copy_kc = kc.copyCourse("2022")
+
+//  class Person(val name: String) {
+//    def unary_+ : Person = new Person(Person.this.name + s" noSurname")
+//  }
+//
+//
+//  val person = new Person("Bob")
+//
+//  println((+person).name)
+
+//  case class Course(title: String, instructor: String)
+//
+//  object Course {
+//    def apply(instructor: String): Course = Course("AdvancedScala", instructor)
+//  }
+//
+//  val scalaCourse = Course("Scala", "Bob")
+
+//  val course = new Course("Scala") // -
+//  val course = new Course("Scala", "Bob") // +
+//  val course = Course("Scala", "Bob") // +
+//  val course = scalaCourse.copy("AdvancedScala") // +
+//  val course = scalaCourse.copy() // +
+//  val course = Course("Alice") // +
+
+
+  object A {
+    val a: String = "value a"
+    println("object A")
   }
 
-  class Course(val courseID: Int, val title: String, val releaseYear: String, val instructor: Instructor){
-    def getID() : String = s"$courseID${instructor.id}"
+  val aVal = A
+  val anotherVal = A
 
-    def isTaughtBy(instructor: Instructor): Boolean = {
-      if (instructor == this.instructor) true
-      else false
-    }
-
-    def copyCourse(newReleaseYear: String) = new Course(
-      courseID = this.courseID,
-      title = this.title,
-      releaseYear = newReleaseYear,
-      instructor = this.instructor)
-
-  }
-
-
-
-  val krip = new Instructor(id = 1, name = "sergEy", surname = "kREpKOV")
-  val kc = new Course(courseID = 9, title = "knifecombat", releaseYear = "2021", instructor = krip)
-
-
-  println(krip.fullName())
-  println(kc.getID())
-  println(kc.isTaughtBy(krip))
-  val copy_kc = kc.copyCourse("2022")
+  println(aVal.a)
+  println(anotherVal.a)
 
 
 
